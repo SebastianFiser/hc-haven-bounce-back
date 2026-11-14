@@ -24,9 +24,10 @@ func _physics_process(delta: float) -> void:
 	
 	if !is_on_floor():
 		velocity.y += delta * gravity
-	if jumped and is_on_floor() :
+	var can_jump: bool = is_on_floor() and velocity.y >= 0.0
+	if jumped and can_jump :
 		velocity.y = veloc_jump
-	if jump_off and !is_on_floor() and velocity.y < 0 and velocity.y < velocity.y * jump_cut:
+	if jump_off and !is_on_floor() and can_jump and velocity.y < 0 and velocity.y < velocity.y * jump_cut:
 		velocity.y = veloc_jump * jump_cut
 	move_and_slide()
 	
