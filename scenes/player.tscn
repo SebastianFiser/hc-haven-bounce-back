@@ -1,11 +1,12 @@
 [gd_scene format=3 uid="uid://y3uaehd0uls5"]
 
 [ext_resource type="Texture2D" uid="uid://c45m2bkgmcel4" path="res://icon.svg" id="1_g2els"]
-[ext_resource type="Script" uid="uid://bshvklxlthnyd" path="res://scenes/physics.gd" id="1_qhqgy"]
+[ext_resource type="Script" uid="uid://bshvklxlthnyd" path="res://scripts/physics.gd" id="1_qhqgy"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_fbbwq"]
+radius = 64.3
 
-[node name="CharacterBody2D" type="CharacterBody2D" unique_id=249291869]
+[node name="CharacterBody2D" type="CharacterBody2D" unique_id=249291869 groups=["player"]]
 script = ExtResource("1_qhqgy")
 
 [node name="Sprite2D" type="Sprite2D" parent="." unique_id=1971099277]
@@ -13,3 +14,7 @@ texture = ExtResource("1_g2els")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=889098084]
 shape = SubResource("CircleShape2D_fbbwq")
+
+[node name="Camera2D" type="Camera2D" parent="." unique_id=20889261]
+zoom = Vector2(0.5, 0.5)
+position_smoothing_enabled = true

@@ -30,6 +30,10 @@ project/assembly_name="hc-heaven-bounce-back"
 
 naming/size/viewport_height=648
 
+[global_group]
+
+player=""
+
 [input]
 
 move_left={
