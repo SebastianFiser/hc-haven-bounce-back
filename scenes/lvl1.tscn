@@ -59,6 +59,7 @@ sources/1 = SubResource("TileSetAtlasSource_u7exc")
 size = Vector2(20, 24.847336)
 
 [node name="Node2D" type="Node2D" unique_id=1964242223]
+visible = false
 scale = Vector2(2, 2)
 
 [node name="TileMapLayer" type="TileMapLayer" parent="." unique_id=623865676]
