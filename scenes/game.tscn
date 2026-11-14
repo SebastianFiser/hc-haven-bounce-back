@@ -1,0 +1,70 @@
+[gd_scene format=3 uid="uid://hffrj4tbwggd"]
+
+[ext_resource type="PackedScene" uid="uid://y3uaehd0uls5" path="res://scenes/player.tscn" id="1_yqjtg"]
+[ext_resource type="Script" uid="uid://cenxlwf3py0is" path="res://scripts/goal.gd" id="2_lnu2h"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_fbbwq"]
+size = Vector2(150, 20)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_0wfyh"]
+size = Vector2(56.599995, 53.899998)
+
+[node name="game" type="Node2D" unique_id=201980430]
+
+[node name="StaticBody2D" type="StaticBody2D" parent="." unique_id=1150332756]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D" unique_id=1712043245]
+position = Vector2(382.99997, 854.99994)
+scale = Vector2(10, 10)
+shape = SubResource("RectangleShape2D_fbbwq")
+debug_color = Color(0.974142, 0, 0.43234977, 0.41960785)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D/CollisionShape2D" unique_id=782355038]
+position = Vector2(594.99994, 714.99994)
+scale = Vector2(10, 10)
+shape = SubResource("RectangleShape2D_fbbwq")
+debug_color = Color(0.974142, 0, 0.43234977, 0.41960785)
+
+[node name="StaticBody2D2" type="StaticBody2D" parent="." unique_id=163730289]
+rotation = 1.579523
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D2" unique_id=1550277754]
+position = Vector2(427.4329, -1212.7761)
+scale = Vector2(10, 10)
+shape = SubResource("RectangleShape2D_fbbwq")
+debug_color = Color(0.974142, 0, 0.43234977, 0.41960785)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D2/CollisionShape2D" unique_id=1570686531]
+position = Vector2(594.99994, 714.99994)
+scale = Vector2(10, 10)
+shape = SubResource("RectangleShape2D_fbbwq")
+debug_color = Color(0.974142, 0, 0.43234977, 0.41960785)
+
+[node name="CharacterBody2D" parent="." unique_id=249291869 instance=ExtResource("1_yqjtg")]
+position = Vector2(393, 473)
+speed = 700.0
+gravity = 1000.0
+veloc_jump = -700.0
+acceleration = 1700.0
+friction = 1000.0
+bounciness = 0.7
+
+[node name="Goal" type="Area2D" parent="." unique_id=693791610]
+position = Vector2(-364, 677)
+scale = Vector2(10, 10)
+script = ExtResource("2_lnu2h")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Goal" unique_id=909732708]
+position = Vector2(0.100001335, -0.20000076)
+scale = Vector2(0.99999994, 0.99999994)
+shape = SubResource("RectangleShape2D_0wfyh")
+
+[node name="ColorRect" type="ColorRect" parent="Goal/CollisionShape2D" unique_id=1996595566]
+offset_left = -18.500002
+offset_top = -18.350006
+offset_right = 21.499998
+offset_bottom = 21.649994
+offset_transform_enabled = true
+metadata/_edit_use_anchors_ = true
+
+[connection signal="body_entered" from="Goal" to="Goal" method="_on_goal_body_entered"]

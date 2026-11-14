@@ -11,7 +11,7 @@ config_version=5
 [application]
 
 config/name="hc-heaven-bounce-back"
-run/main_scene="uid://hffrj4tbwggd"
+run/main_scene="uid://bbtcg4q0ctk7h"
 config/features=PackedStringArray("4.7", "GL Compatibility")
 config/icon="res://icon.svg"
 
@@ -29,10 +29,6 @@ project/assembly_name="hc-heaven-bounce-back"
 [editor]
 
 naming/size/viewport_height=648
-
-[global_group]
-
-player=""
 
 [input]
 
