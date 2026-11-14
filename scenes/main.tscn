@@ -1,6 +1,6 @@
 [gd_scene format=3 uid="uid://bbtcg4q0ctk7h"]
 
-[ext_resource type="Script" uid="uid://bg0dng78ib3vl" path="res://main_menu.gd" id="1_06t4h"]
+[ext_resource type="Script" uid="uid://bg0dng78ib3vl" path="res://scripts/main_menu.gd" id="1_o5qli"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_06t4h"]
 content_margin_left = 4.0
@@ -14,8 +14,8 @@ corner_radius_bottom_right = 20
 corner_radius_bottom_left = 20
 corner_detail = 20
 
-[node name="MainMenu" type="Node2D" unique_id=646089278]
-script = ExtResource("1_06t4h")
+[node name="Main" type="Node2D" unique_id=646089278]
+script = ExtResource("1_o5qli")
 
 [node name="Start" type="Control" parent="." unique_id=186997821]
 layout_mode = 3

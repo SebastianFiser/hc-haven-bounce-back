@@ -12,17 +12,17 @@ func _process(delta: float) -> void:
 
 
 func _on_start_pressed() -> void:
-	print("GTA6 loading...")
-	for i in range(0, 20):
-		await get_tree().create_timer(0.06).timeout
-		print("." .repeat(i))
-	print("kokot")
+	get_tree().change_scene_to_file("res://scenes/game.tscn")
 
 
 func _on_player_pressed() -> void:
 	print("pressed player")
-	get_tree().change_scene_to_file("res://PickPlayer.tscn")
+<<<<<<< HEAD:main_menu.gd
+func _on_player_pressed() -> void:
+	print("pressed player")
+	get_tree().change_scene_to_file("res://scenes/PickPlayer.tscn")
 
 
 func _on_settings_pressed() -> void:
 	get_tree().change_scene_to_file("res://Settings.tscn")
+>>>>>>> origin:scripts/main_menu.gd
