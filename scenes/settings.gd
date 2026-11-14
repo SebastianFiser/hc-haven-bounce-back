@@ -53,3 +53,7 @@ func _update_label() -> void:
 	resolution_label.text = "%d x %d" % [size.x, size.y]
 	decrease_button.disabled = index == 0
 	increase_button.disabled = index == RESOLUTIONS.size() - 1
+
+
+func _on_exit_button_pressed() -> void:
+	get_tree().change_scene_to_file("res://scenes/main.tscn")

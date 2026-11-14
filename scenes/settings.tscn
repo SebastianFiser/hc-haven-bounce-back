@@ -68,15 +68,15 @@ offset_bottom = 340.0
 theme_override_font_sizes/font_size = 40
 text = "0000x000"
 
-[node name="apply_button" type="Button" parent="WSGroup" unique_id=1532480666]
-visible = false
+[node name="exit_button" type="Button" parent="WSGroup" unique_id=1532480666]
 layout_mode = 0
-offset_left = 1264.0
-offset_top = 256.0
-offset_right = 1328.0
-offset_bottom = 320.0
+offset_left = 736.0
+offset_top = 672.0
+offset_right = 815.0
+offset_bottom = 736.0
 theme_override_font_sizes/font_size = 40
-text = "✓"
+text = "Exit"
 
 [connection signal="pressed" from="WSGroup/increase_button" to="." method="_on_increase_pressed"]
 [connection signal="pressed" from="WSGroup/decrease_button" to="." method="_on_decrease_pressed"]
+[connection signal="pressed" from="WSGroup/exit_button" to="." method="_on_exit_button_pressed"]
