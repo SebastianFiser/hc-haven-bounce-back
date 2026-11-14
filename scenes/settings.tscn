@@ -1,4 +1,82 @@
 [gd_scene format=3 uid="uid://0riq5wi6bx3a"]
 
+[ext_resource type="Script" uid="uid://dlqilc5xcf2j2" path="res://scenes/settings.gd" id="1_5p8wc"]
+
 [node name="Settings" type="Node2D" unique_id=1787514106]
-position = Vector2(816, 656)
+script = ExtResource("1_5p8wc")
+
+[node name="Title" type="Label" parent="." unique_id=1222909122]
+offset_left = 560.0
+offset_top = 32.0
+offset_right = 792.0
+offset_bottom = 201.0
+theme_override_font_sizes/font_size = 60
+text = "Settings
+"
+
+[node name="WSGroup" type="Control" parent="." unique_id=1217318140]
+layout_mode = 3
+anchors_preset = 0
+offset_left = -120.0
+offset_top = -64.0
+offset_right = -80.0
+offset_bottom = -24.0
+
+[node name="WSlabel" type="Label" parent="WSGroup" unique_id=1080291134]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = -7.6000004
+anchor_top = -7.2000003
+anchor_right = -7.6000004
+anchor_bottom = -7.2000003
+offset_left = 472.0
+offset_top = 544.0
+offset_right = 836.0
+offset_bottom = 599.0
+theme_override_font_sizes/font_size = 40
+text = "Window resolution"
+
+[node name="increase_button" type="Button" parent="WSGroup" unique_id=693973057]
+layout_mode = 0
+offset_left = 1072.0
+offset_top = 256.0
+offset_right = 1136.0
+offset_bottom = 320.0
+theme_override_font_sizes/font_size = 40
+text = ">"
+
+[node name="decrease_button" type="Button" parent="WSGroup" unique_id=943372717]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = -7.6000004
+anchor_top = 3.2
+anchor_right = -7.6000004
+anchor_bottom = 3.2
+offset_left = 1048.0
+offset_top = 128.0
+offset_right = 1112.0
+offset_bottom = 192.0
+theme_override_font_sizes/font_size = 40
+text = "<"
+
+[node name="Resolution" type="Label" parent="WSGroup" unique_id=1864519210]
+layout_mode = 0
+offset_left = 840.0
+offset_top = 260.0
+offset_right = 1022.0
+offset_bottom = 340.0
+theme_override_font_sizes/font_size = 40
+text = "0000x000"
+
+[node name="apply_button" type="Button" parent="WSGroup" unique_id=1532480666]
+visible = false
+layout_mode = 0
+offset_left = 1264.0
+offset_top = 256.0
+offset_right = 1328.0
+offset_bottom = 320.0
+theme_override_font_sizes/font_size = 40
+text = "✓"
+
+[connection signal="pressed" from="WSGroup/increase_button" to="." method="_on_increase_pressed"]
+[connection signal="pressed" from="WSGroup/decrease_button" to="." method="_on_decrease_pressed"]
