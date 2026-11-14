@@ -2,28 +2,39 @@
 
 [ext_resource type="Script" uid="uid://bg0dng78ib3vl" path="res://scripts/main_menu.gd" id="1_o5qli"]
 [ext_resource type="Texture2D" uid="uid://co4gg1xugbpsr" path="res://button ver 2.png" id="2_0wfyh"]
+[ext_resource type="Texture2D" uid="uid://dpkbj4w2jddxx" path="res://button ver 2-2.png" id="3_sugp2"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_k6tcs"]
 atlas = ExtResource("2_0wfyh")
-region = Rect2(80, 8.75, 53.5, 23.5)
+region = Rect2(80, 9, 53, 23)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_svmvm"]
 atlas = ExtResource("2_0wfyh")
 region = Rect2(207.86382, 9.8089905, 53.20256, 22.570786)
 
+[sub_resource type="AtlasTexture" id="AtlasTexture_tipki"]
+atlas = ExtResource("3_sugp2")
+region = Rect2(282, 10, 53, 22)
+
 [sub_resource type="AtlasTexture" id="AtlasTexture_0wfyh"]
-atlas = ExtResource("2_0wfyh")
-region = Rect2(10.86776, 8.438868, 53.023155, 24.1303)
+atlas = ExtResource("3_sugp2")
+region = Rect2(11, 9, 53, 23)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_sugp2"]
+atlas = ExtResource("3_sugp2")
+region = Rect2(9.844654, 73.027794, 53.15792, 23.306225)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_jyhfs"]
 atlas = ExtResource("2_0wfyh")
-region = Rect2(79.9964, 41.98996, 52.988205, 23.011337)
+region = Rect2(80, 42, 53, 23)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_tbgi4"]
 atlas = ExtResource("2_0wfyh")
 region = Rect2(207.5093, 43.682003, 53.70836, 21.430431)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_tefeu"]
+atlas = ExtResource("3_sugp2")
+region = Rect2(282, 43, 53, 22)
 
 [node name="Main" type="Node2D" unique_id=646089278]
 script = ExtResource("1_o5qli")
@@ -50,11 +61,12 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 offset_left = 552.0
 offset_top = 600.0
-offset_right = -632.0
-offset_bottom = -76.0
+offset_right = -636.0
+offset_bottom = -80.0
 scale = Vector2(2, 2)
 texture_normal = SubResource("AtlasTexture_k6tcs")
 texture_pressed = SubResource("AtlasTexture_svmvm")
+texture_hover = SubResource("AtlasTexture_tipki")
 stretch_mode = 0
 
 [node name="player" type="TextureButton" parent="Start" unique_id=710408531]
@@ -63,9 +75,9 @@ anchors_preset = -1
 anchor_right = 1.0
 anchor_bottom = 1.0
 offset_left = 544.0
-offset_top = 456.0
+offset_top = 472.0
 offset_right = -536.0
-offset_bottom = -176.0
+offset_bottom = -160.0
 texture_normal = SubResource("AtlasTexture_0wfyh")
 texture_pressed = SubResource("AtlasTexture_sugp2")
 stretch_mode = 0
@@ -73,11 +85,12 @@ stretch_mode = 0
 [node name="settings" type="TextureButton" parent="Start" unique_id=539181291]
 layout_mode = 0
 offset_left = 536.0
-offset_top = 336.0
+offset_top = 344.0
 offset_right = 752.0
-offset_bottom = 424.0
+offset_bottom = 432.0
 texture_normal = SubResource("AtlasTexture_jyhfs")
 texture_pressed = SubResource("AtlasTexture_tbgi4")
+texture_hover = SubResource("AtlasTexture_tefeu")
 stretch_mode = 0
 
 [connection signal="pressed" from="Start/start" to="." method="_on_start_pressed"]
