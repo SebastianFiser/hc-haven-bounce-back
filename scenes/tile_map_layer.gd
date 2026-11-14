@@ -22,7 +22,8 @@ func _ready() -> void:
 
 func fill_dirt() -> void:
 	for cell: Vector2i in get_used_cells():
-		if get_cell_atlas_coords(cell) != grass_tile:
+		var data: TileData = get_cell_tile_data(cell)
+		if data == null or not data.get_custom_data("grows_dirt"):
 			continue
 
 		for step in range(1, fill_depth + 1):

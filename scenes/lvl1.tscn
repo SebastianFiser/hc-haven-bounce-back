@@ -3,6 +3,7 @@
 [ext_resource type="Texture2D" uid="uid://poqubw4xdlhc" path="res://assets/zem.png" id="1_xmh5c"]
 [ext_resource type="Script" uid="uid://wv16m0gpv6ih" path="res://scenes/tile_map_layer.gd" id="2_6j3wd"]
 [ext_resource type="PackedScene" uid="uid://y3uaehd0uls5" path="res://scenes/player.tscn" id="2_g83ud"]
+[ext_resource type="Texture2D" uid="uid://dp34n1oipf8fw" path="res://assets/Sipka pro fisera.png" id="2_hp87r"]
 [ext_resource type="PackedScene" uid="uid://b3iq8w4pttico" path="res://scenes/goal.tscn" id="3_6j3wd"]
 [ext_resource type="PackedScene" uid="uid://devo0170ab2m5" path="res://scenes/hud.tscn" id="4_hp87r"]
 
@@ -11,6 +12,7 @@ texture = ExtResource("1_xmh5c")
 0:0/next_alternative_id = 3
 0:0/0 = 0
 0:0/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
+0:0/0/custom_data_0 = true
 0:0/1 = 1
 0:0/1/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
 1:0/next_alternative_id = 3
@@ -37,18 +39,26 @@ texture = ExtResource("1_xmh5c")
 3:0/0 = 0
 3:0/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
 
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_u7exc"]
+texture = ExtResource("2_hp87r")
+0:0/0 = 0
+0:1/0 = 0
+
 [sub_resource type="TileSet" id="TileSet_sx1j4"]
 uv_clipping = true
 physics_layer_0/collision_layer = 1
 physics_layer_1/collision_layer = 1
+custom_data_layer_0/name = "grows_dirt"
+custom_data_layer_0/type = 1
 sources/0 = SubResource("TileSetAtlasSource_mvjca")
+sources/1 = SubResource("TileSetAtlasSource_u7exc")
 
 [node name="Node2D" type="Node2D" unique_id=1964242223]
 scale = Vector2(2, 2)
 
 [node name="TileMapLayer" type="TileMapLayer" parent="." unique_id=623865676]
 scale = Vector2(2, 2)
-tile_map_data = PackedByteArray("AAALAAgAAAAAAAAAAAAMAAgAAAAAAAAAAAANAAgAAAAAAAAAAAAOAAgAAAAAAAAAAAAPAAgAAAAAAAAAAAAQAAgAAAAAAAAAAAARAAgAAAAAAAAAAAASAAgAAAAAAAAAAAATAAgAAAAAAAAAAAAUAAgAAAAAAAAAAAAVAAgAAAAAAAAAAAAWAAgAAAAAAAAAAAAXAAgAAAAAAAAAAAAYAAgAAAAAAAAAAAAZAAgAAAAAAAAAAAAaAAgAAAAAAAAAAAAbAAgAAAAAAAAAAAAcAAgAAAAAAAAAAAAdAAgAAAAAAAAAAAAKAAgAAAAAAAAAAAAJAAgAAAAAAAAAAAAIAAgAAAAAAAAAAAAHAAgAAAAAAAAAAAAGAAgAAAAAAAAAAAAFAAgAAAAAAAAAAAAEAAgAAAAAAAAAAAADAAgAAAAAAAAAAAACAAgAAAAAAAAAAAABAAgAAAAAAAAAAAAAAAgAAAAAAAAAAAD//wgAAAAAAAAAAAD+/wgAAAAAAAAAAAD9/wgAAAAAAAAAAAD8/wgAAAAAAAAAAAD7/wgAAAAAAAAAAAD6/wgAAAAAAAAAAAAeAAgAAAAAAAAAAAAfAAgAAAAAAAAAAAAgAAgAAAAAAAAAAAAhAAgAAAAAAAAAAAAiAAgAAAAAAAAAAAAjAAgAAAAAAAAAAAAkAAgAAAAAAAAAAAAlAAgAAAAAAAAAAAAmAAgAAAAAAAAAAAAnAAgAAAAAAAAAAAAoAAgAAAAAAAAAAAApAAgAAAAAAAAAAAAqAAgAAAAAAAAAAAArAAgAAAAAAAAAAAAsAAgAAAAAAAAAAAAtAAgAAAAAAAAAAAAuAAgAAAAAAAAAAAAvAAgAAAAAAAAAAAAwAAgAAAAAAAAAAAAxAAgAAAAAAAAAAAA=")
+tile_map_data = PackedByteArray("AAALAAgAAAAAAAAAAAAMAAgAAAAAAAAAAAANAAgAAAAAAAAAAAAOAAgAAAAAAAAAAAAPAAgAAAAAAAAAAAAQAAgAAAAAAAAAAAARAAgAAAAAAAAAAAASAAgAAAAAAAAAAAATAAgAAAAAAAAAAAAUAAgAAAAAAAAAAAAVAAgAAAAAAAAAAAAWAAgAAAAAAAAAAAAXAAgAAAAAAAAAAAAYAAgAAAAAAAAAAAAZAAgAAAAAAAAAAAAaAAgAAAAAAAAAAAAbAAgAAAAAAAAAAAAcAAgAAAAAAAAAAAAdAAgAAAAAAAAAAAAKAAgAAAAAAAAAAAAJAAgAAAAAAAAAAAAIAAgAAAAAAAAAAAAHAAgAAAAAAAAAAAAGAAgAAAAAAAAAAAAFAAgAAAAAAAAAAAAEAAgAAAAAAAAAAAADAAgAAAAAAAAAAAACAAgAAAAAAAAAAAABAAgAAAAAAAAAAAAAAAgAAAAAAAAAAAD//wgAAAAAAAAAAAD+/wgAAAAAAAAAAAD9/wgAAAAAAAAAAAD8/wgAAAAAAAAAAAD7/wgAAAAAAAAAAAD6/wgAAAAAAAAAAAAeAAgAAAAAAAAAAAAfAAgAAAAAAAAAAAAgAAgAAAAAAAAAAAAhAAgAAAAAAAAAAAAiAAgAAAAAAAAAAAAjAAgAAAAAAAAAAAAkAAgAAAAAAAAAAAAlAAgAAAAAAAAAAAAmAAgAAAAAAAAAAAAnAAgAAAAAAAAAAAAoAAgAAAAAAAAAAAApAAgAAAAAAAAAAAAqAAgAAAAAAAAAAAArAAgAAAAAAAAAAAAsAAgAAAAAAAAAAAAtAAgAAAAAAAAAAAAuAAgAAAAAAAAAAAAvAAgAAAAAAAAAAAAwAAgAAAAAAAAAAAAxAAgAAAAAAAAAAAACAAQAAQAAAAAAAFABAAQAAQAAAAEAAFAWAAQAAQAAAAAAAFAVAAQAAQAAAAEAAFAlAAMAAQAAAAEAADAlAAQAAQAAAAAAADA=")
 tile_set = SubResource("TileSet_sx1j4")
 rendering_quadrant_size = 32
 physics_quadrant_size = 32
@@ -56,7 +66,7 @@ script = ExtResource("2_6j3wd")
 fill_depth = 5
 
 [node name="CharacterBody2D" parent="." unique_id=249291869 instance=ExtResource("2_g83ud")]
-position = Vector2(265, 127)
+position = Vector2(-82.5, 92.5)
 scale = Vector2(0.3, 0.3)
 
 [node name="Goal" parent="." unique_id=286393484 instance=ExtResource("3_6j3wd")]
