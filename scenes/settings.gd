@@ -8,6 +8,8 @@ const RESOLUTIONS: Array[Vector2i] = [
 	Vector2i(2560, 1440),
 ]
 
+@onready var slider: HSlider = %MusicSlider
+
 var index := 0
 
 @onready var resolution_label: Label = $WSGroup/Resolution
@@ -22,6 +24,10 @@ func _ready() -> void:
 
 	increase_button.pressed.connect(_on_increase_pressed)
 	decrease_button.pressed.connect(_on_decrease_pressed)
+	
+	var idx: int = AudioServer.get_bus_index("Music")
+	slider.value = db_to_linear(AudioServer.get_bus_volume_db(idx))
+	slider.value_changed(_on_slider_changed)
 	_update_label()
 
 
@@ -60,3 +66,7 @@ func _update_label() -> void:
 func _on_exit_button_pressed() -> void:
 	_apply_resolution()
 	get_tree().change_scene_to_file("res://scenes/main.tscn")
+	
+func _on_slider_changed(value: float) -> void:
+	MusicPlayer.set_music_volume(value)
+	MusicPlayer.save_music_volume(value)
