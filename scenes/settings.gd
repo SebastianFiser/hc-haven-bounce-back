@@ -8,10 +8,9 @@ const RESOLUTIONS: Array[Vector2i] = [
 	Vector2i(2560, 1440),
 ]
 
-@onready var slider: HSlider = %MusicSlider
-
 var index := 0
 
+@onready var slider: HSlider = %MusicSlider
 @onready var resolution_label: Label = $WSGroup/Resolution
 @onready var increase_button: Button = $WSGroup/increase_button
 @onready var decrease_button: Button = $WSGroup/decrease_button
@@ -24,49 +23,47 @@ func _ready() -> void:
 
 	increase_button.pressed.connect(_on_increase_pressed)
 	decrease_button.pressed.connect(_on_decrease_pressed)
-	
-	var idx: int = AudioServer.get_bus_index("Music")
-	slider.value = db_to_linear(AudioServer.get_bus_volume_db(idx))
+
+	# Slider starts at the current music volume, THEN we connect the signal
+	var bus_idx: int = AudioServer.get_bus_index("Music")
+	slider.value = db_to_linear(AudioServer.get_bus_volume_db(bus_idx))
 	slider.value_changed.connect(_on_slider_changed)
+
 	_update_label()
 
 
 func _on_increase_pressed() -> void:
 	index = mini(index + 1, RESOLUTIONS.size() - 1)
 	_update_label()
-	
 
 
 func _on_decrease_pressed() -> void:
 	index = maxi(index - 1, 0)
 	_update_label()
-	
 
 
 func _apply_resolution() -> void:
-	var size := RESOLUTIONS[index]
-	DisplayServer.window_set_size(size)
+	var res := RESOLUTIONS[index]
+	DisplayServer.window_set_size(res)
 
 	# Re-center the window on the screen so it doesn't jump off to a corner
 	var screen_pos := DisplayServer.screen_get_position()
 	var screen_size := DisplayServer.screen_get_size()
-	DisplayServer.window_set_position(screen_pos + (screen_size - size) / 2)
-
-	
+	DisplayServer.window_set_position(screen_pos + (screen_size - res) / 2)
 
 
 func _update_label() -> void:
-	print("upd_label")
-	var size := RESOLUTIONS[index]
-	resolution_label.text = "%d x %d" % [size.x, size.y]
+	var res := RESOLUTIONS[index]
+	resolution_label.text = "%d x %d" % [res.x, res.y]
 	decrease_button.disabled = index == 0
 	increase_button.disabled = index == RESOLUTIONS.size() - 1
 
 
+func _on_slider_changed(value: float) -> void:
+	MusicPlayer.set_music_volume(value)   # live change only, no file write
+
+
 func _on_exit_button_pressed() -> void:
+	MusicPlayer.save_music_volume(slider.value)   # save once, on exit
 	_apply_resolution()
 	get_tree().change_scene_to_file("res://scenes/main.tscn")
-	
-func _on_slider_changed(value: float) -> void:
-	MusicPlayer.set_music_volume(value)
-	MusicPlayer.save_music_volume(value)

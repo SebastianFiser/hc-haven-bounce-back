@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://b5jbh1oo602s6"
+path="res://.godot/imported/smutne.mp3-9255b20ac90e49f76ec123da13764c65.mp3str"
+
+[deps]
+
+source_file="res://matejovo slozka/smutne.mp3"
+dest_files=["res://.godot/imported/smutne.mp3-9255b20ac90e49f76ec123da13764c65.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4
