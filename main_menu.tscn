@@ -23,6 +23,15 @@ anchors_preset = 0
 offset_right = 1280.0
 offset_bottom = 720.0
 
+[node name="Label" type="Label" parent="Start" unique_id=2088382483]
+layout_mode = 0
+offset_left = 568.0
+offset_top = 144.0
+offset_right = 718.0
+offset_bottom = 227.0
+theme_override_font_sizes/font_size = 60
+text = "Hello"
+
 [node name="start" type="Button" parent="Start" unique_id=587290838]
 layout_mode = 1
 anchors_preset = -1
@@ -49,14 +58,11 @@ theme_override_font_sizes/font_size = 40
 theme_override_styles/normal = SubResource("StyleBoxFlat_06t4h")
 text = "Player"
 
-[node name="Label" type="Label" parent="Start" unique_id=2088382483]
+[node name="settings" type="Button" parent="Start" unique_id=2104310099]
 layout_mode = 0
-offset_left = 568.0
-offset_top = 144.0
-offset_right = 718.0
-offset_bottom = 227.0
-theme_override_font_sizes/font_size = 60
-text = "Hello"
+offset_right = 8.0
+offset_bottom = 8.0
 
 [connection signal="pressed" from="Start/start" to="." method="_on_start_pressed"]
 [connection signal="pressed" from="Start/player" to="." method="_on_player_pressed"]
+[connection signal="pressed" from="Start/settings" to="." method="_on_settings_pressed"]
