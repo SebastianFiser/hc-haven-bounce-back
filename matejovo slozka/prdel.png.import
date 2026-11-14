@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://pr30m2ig07sa"
-path="res://.godot/imported/button ver 2.png-d664beb352c2703096d81877abee1228.ctex"
+uid="uid://crbcfctrmmmcd"
+path="res://.godot/imported/prdel.png-17d55dd923b7c67afb503c06f3696985.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/button ver 2.png"
-dest_files=["res://.godot/imported/button ver 2.png-d664beb352c2703096d81877abee1228.ctex"]
+source_file="res://matejovo slozka/prdel.png"
+dest_files=["res://.godot/imported/prdel.png-17d55dd923b7c67afb503c06f3696985.ctex"]
 
 [params]
 
