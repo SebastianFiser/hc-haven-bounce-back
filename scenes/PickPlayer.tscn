@@ -1,6 +1,6 @@
-[gd_scene format=3 uid="uid://ds0ojklrfanin"]
+[gd_scene format=3 uid="uid://c850wsnvx3nm6"]
 
-[ext_resource type="Script" uid="uid://csl1p1llfox8" path="res://pick_player.gd" id="1_4fo2u"]
+[ext_resource type="Script" path="res://pick_player.gd" id="1_4fo2u"]
 [ext_resource type="Texture2D" uid="uid://cq75i2wff3j7s" path="res://Sprites/Untitled design-1.png" id="2_erie1"]
 
 [node name="PickPlayer" type="Node2D" unique_id=124473259]
