@@ -2,16 +2,26 @@
 
 importer="texture"
 type="CompressedTexture2D"
+<<<<<<<< HEAD:assets/Sipka pro fisera-Sheet.png.import
 uid="uid://mulkqpqwq46m"
 path="res://.godot/imported/Sipka pro fisera-Sheet.png-d2c6107f524ab58d7d13a9fc269963b7.ctex"
+========
+uid="uid://c45m2bkgmcel4"
+path="res://.godot/imported/icon.svg-56083ea2a1f1a4f1e49773bdc6d7826c.ctex"
+>>>>>>>> 3e24eba2b1180be8342fd97c3e3b4db98ef610ee:assets/icon.svg.import
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
+<<<<<<<< HEAD:assets/Sipka pro fisera-Sheet.png.import
 source_file="res://assets/Sipka pro fisera-Sheet.png"
 dest_files=["res://.godot/imported/Sipka pro fisera-Sheet.png-d2c6107f524ab58d7d13a9fc269963b7.ctex"]
+========
+source_file="res://assets/icon.svg"
+dest_files=["res://.godot/imported/icon.svg-56083ea2a1f1a4f1e49773bdc6d7826c.ctex"]
+>>>>>>>> 3e24eba2b1180be8342fd97c3e3b4db98ef610ee:assets/icon.svg.import
 
 [params]
 

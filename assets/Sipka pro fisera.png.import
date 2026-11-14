@@ -2,7 +2,11 @@
 
 importer="texture"
 type="CompressedTexture2D"
+<<<<<<< HEAD
 uid="uid://dpqahjg7xgb4s"
+=======
+uid="uid://dp34n1oipf8fw"
+>>>>>>> 3e24eba2b1180be8342fd97c3e3b4db98ef610ee
 path="res://.godot/imported/Sipka pro fisera.png-38903dc942bf39ef966a6abb98c69e48.ctex"
 metadata={
 "vram_texture": false

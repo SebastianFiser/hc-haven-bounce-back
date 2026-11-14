@@ -1,5 +1,9 @@
 [gd_scene format=3 uid="uid://y3uaehd0uls5"]
 
+<<<<<<< HEAD
+=======
+[ext_resource type="Texture2D" uid="uid://c45m2bkgmcel4" path="res://assets/icon.svg" id="1_g2els"]
+>>>>>>> 3e24eba2b1180be8342fd97c3e3b4db98ef610ee
 [ext_resource type="Script" uid="uid://bshvklxlthnyd" path="res://scripts/physics.gd" id="1_qhqgy"]
 
 [sub_resource type="CompressedTexture2D" id="CompressedTexture2D_3vyb7"]

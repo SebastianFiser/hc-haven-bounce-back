@@ -13,6 +13,10 @@ config_version=5
 config/name="hc-heaven-bounce-back"
 run/main_scene="uid://bbtcg4q0ctk7h"
 config/features=PackedStringArray("4.7", "GL Compatibility")
+<<<<<<< HEAD
+=======
+config/icon="res://assets/icon.svg"
+>>>>>>> 3e24eba2b1180be8342fd97c3e3b4db98ef610ee
 
 [display]
 
