@@ -1,0 +1,57 @@
+[gd_scene format=3 uid="uid://c850wsnvx3nm6"]
+
+[ext_resource type="Script" path="res://pick_player.gd" id="1_4fo2u"]
+[ext_resource type="Texture2D" uid="uid://cq75i2wff3j7s" path="res://Sprites/Untitled design-1.png" id="2_erie1"]
+
+[node name="PickPlayer" type="Node2D" unique_id=124473259]
+position = Vector2(24, 0)
+script = ExtResource("1_4fo2u")
+
+[node name="Buttons" type="Control" parent="." unique_id=404475655]
+layout_mode = 3
+anchors_preset = 0
+offset_left = -40.0
+offset_top = -16.0
+offset_right = 1240.0
+offset_bottom = 704.0
+
+[node name="Left" type="Button" parent="Buttons" unique_id=352998542]
+layout_mode = 0
+offset_left = 264.0
+offset_top = 296.0
+offset_right = 360.0
+offset_bottom = 400.0
+theme_override_font_sizes/font_size = 60
+text = "<"
+
+[node name="Right" type="Button" parent="Buttons" unique_id=1260972992]
+layout_mode = 0
+offset_left = 896.0
+offset_top = 296.0
+offset_right = 992.0
+offset_bottom = 400.0
+theme_override_font_sizes/font_size = 60
+text = ">"
+
+[node name="Exit" type="Button" parent="Buttons" unique_id=92283535]
+layout_mode = 0
+offset_left = 552.0
+offset_top = 608.0
+offset_right = 728.0
+offset_bottom = 671.0
+theme_override_font_sizes/font_size = 40
+text = "Exit"
+
+[node name="Player" type="Control" parent="." unique_id=1455321706]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="Sprite2D" type="Sprite2D" parent="Player" unique_id=791830611]
+position = Vector2(608, 336)
+texture = ExtResource("2_erie1")
+
+[connection signal="pressed" from="Buttons/Left" to="." method="_on_left_pressed"]
+[connection signal="pressed" from="Buttons/Right" to="." method="_on_right_pressed"]
+[connection signal="pressed" from="Buttons/Exit" to="." method="_on_exit_pressed"]

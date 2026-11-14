@@ -31,6 +31,7 @@ rotation = 1.579523
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D2" unique_id=1550277754]
 position = Vector2(427.4329, -1212.7761)
+rotation = -0.0075629298
 scale = Vector2(10, 10)
 shape = SubResource("RectangleShape2D_fbbwq")
 debug_color = Color(0.974142, 0, 0.43234977, 0.41960785)
