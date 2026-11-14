@@ -1,0 +1,41 @@
+[gd_scene format=3 uid="uid://ds0ojklrfanin"]
+
+[ext_resource type="Script" uid="uid://csl1p1llfox8" path="res://pick_player.gd" id="1_4fo2u"]
+
+[node name="PickPlayer" type="Node2D" unique_id=124473259]
+script = ExtResource("1_4fo2u")
+
+[node name="Buttons" type="Control" parent="." unique_id=404475655]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 1280.0
+offset_bottom = 720.0
+
+[node name="Left" type="Button" parent="Buttons" unique_id=352998542]
+layout_mode = 0
+offset_left = 264.0
+offset_top = 296.0
+offset_right = 360.0
+offset_bottom = 400.0
+theme_override_font_sizes/font_size = 60
+text = "<"
+
+[node name="Right" type="Button" parent="Buttons" unique_id=1260972992]
+layout_mode = 0
+offset_left = 896.0
+offset_top = 296.0
+offset_right = 992.0
+offset_bottom = 400.0
+theme_override_font_sizes/font_size = 60
+text = ">"
+
+[node name="Exit" type="Button" parent="Buttons" unique_id=92283535]
+layout_mode = 0
+offset_left = 552.0
+offset_top = 608.0
+offset_right = 728.0
+offset_bottom = 671.0
+theme_override_font_sizes/font_size = 40
+text = "Exit"
+
+[connection signal="pressed" from="Buttons/Exit" to="." method="_on_exit_pressed"]
