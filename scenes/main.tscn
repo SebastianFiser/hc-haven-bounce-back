@@ -52,22 +52,22 @@ offset_bottom = 720.0
 
 [node name="Label" type="Label" parent="Start" unique_id=2088382483]
 layout_mode = 0
-offset_left = 568.0
-offset_top = 144.0
-offset_right = 718.0
-offset_bottom = 227.0
+offset_left = 456.0
+offset_top = 40.0
+offset_right = 819.0
+offset_bottom = 123.0
 theme_override_font_sizes/font_size = 60
-text = "Hello"
+text = "GAME NAME"
 
 [node name="start" type="TextureButton" parent="Start" unique_id=788135746]
 layout_mode = 1
 anchors_preset = -1
 anchor_right = 1.0
 anchor_bottom = 1.0
-offset_left = 552.0
-offset_top = 600.0
-offset_right = -636.0
-offset_bottom = -80.0
+offset_left = 848.0
+offset_top = 168.0
+offset_right = -324.0
+offset_bottom = -508.0
 scale = Vector2(2, 2)
 texture_normal = SubResource("AtlasTexture_k6tcs")
 texture_pressed = SubResource("AtlasTexture_svmvm")
@@ -79,10 +79,10 @@ layout_mode = 1
 anchors_preset = -1
 anchor_right = 1.0
 anchor_bottom = 1.0
-offset_left = 544.0
-offset_top = 472.0
-offset_right = -536.0
-offset_bottom = -160.0
+offset_left = 856.0
+offset_top = 536.0
+offset_right = -224.0
+offset_bottom = -96.0
 texture_normal = SubResource("AtlasTexture_0wfyh")
 texture_pressed = SubResource("AtlasTexture_sugp2")
 texture_hover = SubResource("AtlasTexture_85g3d")
@@ -90,10 +90,10 @@ stretch_mode = 0
 
 [node name="settings" type="TextureButton" parent="Start" unique_id=539181291]
 layout_mode = 0
-offset_left = 536.0
-offset_top = 344.0
-offset_right = 752.0
-offset_bottom = 432.0
+offset_left = 848.0
+offset_top = 352.0
+offset_right = 1064.0
+offset_bottom = 440.0
 texture_normal = SubResource("AtlasTexture_jyhfs")
 texture_pressed = SubResource("AtlasTexture_tbgi4")
 texture_hover = SubResource("AtlasTexture_tefeu")
