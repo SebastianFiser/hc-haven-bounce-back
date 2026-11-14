@@ -1,18 +1,21 @@
 extends Sprite2D
-
-@export var speed: float = 200.0
+var texture_list = [
+	preload("res://Sprites/Untitled design-1.png"),
+	preload("res://Sprites/Untitled design-2.png"),
+	preload("res://Sprites/Untitled design-3.png"),
+	preload("res://Sprites/Untitled design-4.png"),
+	preload("res://Sprites/Untitled design-5.png")
+]
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
-	pass
+	var texture = get_parent().get_parent().sprite_selected
+
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta: float) -> void:
-	handle_movement(delta)
-	
-	
-func handle_movement(delta: float) -> void:
-	var smer = Input.get_axis("move_left", "move_right")
-	position.x += smer * delta * speed
-	
-	
+	pass
+
+
+func _on_debug_sprite_pressed() -> void:
+	print(texture)

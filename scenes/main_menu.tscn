@@ -1,0 +1,85 @@
+[gd_scene format=3 uid="uid://dao0tnnc6qa2i"]
+
+[ext_resource type="Script" path="res://main_menu.gd" id="1_06t4h"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_06t4h"]
+content_margin_left = 4.0
+content_margin_top = 4.0
+content_margin_right = 4.0
+content_margin_bottom = 4.0
+bg_color = Color(0.1, 0.1, 0.1, 0.6)
+corner_radius_top_left = 20
+corner_radius_top_right = 20
+corner_radius_bottom_right = 20
+corner_radius_bottom_left = 20
+corner_detail = 20
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_7vrkn"]
+content_margin_left = 4.0
+content_margin_top = 4.0
+content_margin_right = 4.0
+content_margin_bottom = 4.0
+bg_color = Color(0.1, 0.1, 0.1, 0.6)
+corner_radius_top_left = 20
+corner_radius_top_right = 20
+corner_radius_bottom_right = 20
+corner_radius_bottom_left = 20
+corner_detail = 5
+
+[node name="MainMenu" type="Node2D" unique_id=646089278]
+script = ExtResource("1_06t4h")
+
+[node name="Start" type="Control" parent="." unique_id=186997821]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 1280.0
+offset_bottom = 720.0
+
+[node name="Label" type="Label" parent="Start" unique_id=2088382483]
+layout_mode = 0
+offset_left = 568.0
+offset_top = 56.0
+offset_right = 718.0
+offset_bottom = 139.0
+theme_override_font_sizes/font_size = 60
+text = "Hello"
+
+[node name="start" type="Button" parent="Start" unique_id=587290838]
+layout_mode = 1
+anchors_preset = -1
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 544.0
+offset_top = 600.0
+offset_right = -552.0
+offset_bottom = -40.0
+theme_override_font_sizes/font_size = 40
+theme_override_styles/normal = SubResource("StyleBoxFlat_06t4h")
+text = "Start"
+
+[node name="player" type="Button" parent="Start" unique_id=373396623]
+layout_mode = 1
+anchors_preset = -1
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 540.0
+offset_top = 224.0
+offset_right = -540.0
+offset_bottom = -408.0
+theme_override_font_sizes/font_size = 40
+theme_override_styles/normal = SubResource("StyleBoxFlat_06t4h")
+text = "Player"
+
+[node name="settings" type="Button" parent="Start" unique_id=2104310099]
+layout_mode = 0
+offset_left = 540.0
+offset_top = 344.0
+offset_right = 740.0
+offset_bottom = 432.0
+theme_override_font_sizes/font_size = 40
+theme_override_styles/normal = SubResource("StyleBoxFlat_7vrkn")
+text = "Settings"
+
+[connection signal="pressed" from="Start/start" to="." method="_on_start_pressed"]
+[connection signal="pressed" from="Start/player" to="." method="_on_player_pressed"]
+[connection signal="pressed" from="Start/settings" to="." method="_on_settings_pressed"]
