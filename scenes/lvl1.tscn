@@ -6,6 +6,7 @@
 [ext_resource type="Texture2D" uid="uid://ba6gsc31n8bhj" path="res://assets/Sipka pro fisera.png" id="2_hp87r"]
 [ext_resource type="PackedScene" uid="uid://b3iq8w4pttico" path="res://scenes/goal.tscn" id="3_6j3wd"]
 [ext_resource type="PackedScene" uid="uid://devo0170ab2m5" path="res://scenes/hud.tscn" id="4_hp87r"]
+[ext_resource type="PackedScene" uid="uid://btyviafm85jqn" path="res://scenes/lvl2.tscn" id="6_hp87r"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_mvjca"]
 texture = ExtResource("1_xmh5c")
@@ -69,7 +70,8 @@ position = Vector2(-82.5, 92.5)
 scale = Vector2(0.3, 0.3)
 
 [node name="Goal" parent="." unique_id=286393484 instance=ExtResource("3_6j3wd")]
-position = Vector2(3514, 227)
+position = Vector2(-80, 220)
 scale = Vector2(1, 1)
+next_level = ExtResource("6_hp87r")
 
 [node name="CanvasLayer" parent="." unique_id=153667473 instance=ExtResource("4_hp87r")]

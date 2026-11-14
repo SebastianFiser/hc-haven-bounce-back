@@ -70,12 +70,13 @@ text = "0000x000"
 
 [node name="exit_button" type="Button" parent="WSGroup" unique_id=1532480666]
 layout_mode = 0
-offset_left = 736.0
-offset_top = 672.0
-offset_right = 815.0
-offset_bottom = 736.0
+offset_left = 680.0
+offset_top = 664.0
+offset_right = 919.0
+offset_bottom = 728.0
 theme_override_font_sizes/font_size = 40
-text = "Exit"
+text = "Apply & Exit
+"
 
 [connection signal="pressed" from="WSGroup/increase_button" to="." method="_on_increase_pressed"]
 [connection signal="pressed" from="WSGroup/decrease_button" to="." method="_on_decrease_pressed"]

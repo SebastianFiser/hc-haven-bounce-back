@@ -27,12 +27,14 @@ func _ready() -> void:
 
 func _on_increase_pressed() -> void:
 	index = mini(index + 1, RESOLUTIONS.size() - 1)
-	_apply_resolution()
+	_update_label()
+	
 
 
 func _on_decrease_pressed() -> void:
 	index = maxi(index - 1, 0)
-	_apply_resolution()
+	_update_label()
+	
 
 
 func _apply_resolution() -> void:
@@ -44,7 +46,7 @@ func _apply_resolution() -> void:
 	var screen_size := DisplayServer.screen_get_size()
 	DisplayServer.window_set_position(screen_pos + (screen_size - size) / 2)
 
-	_update_label()
+	
 
 
 func _update_label() -> void:
@@ -56,4 +58,5 @@ func _update_label() -> void:
 
 
 func _on_exit_button_pressed() -> void:
+	_apply_resolution()
 	get_tree().change_scene_to_file("res://scenes/main.tscn")
