@@ -1,13 +1,14 @@
 extends CharacterBody2D
 
 
-@export var speed: float = 400.0
-@export var gravity: float = 900.0
-@export var veloc_jump: float = -400
-@export var acceleration: float = 1500.0
-@export var friction: float = 250.0
-@export var bounciness: float = 0.5
+@export var speed: float = 700.0
+@export var gravity: float = 1000.0
+@export var veloc_jump: float = -700
+@export var acceleration: float = 1700.0
+@export var friction: float = 600.0
+@export var bounciness: float = 0.8
 @export var jump_cut: float = 0.5
+@export var min_bounce_speed = 450
 
 func _physics_process(delta: float) -> void:
 	var velocity_before = velocity
@@ -30,8 +31,9 @@ func _physics_process(delta: float) -> void:
 	move_and_slide()
 	
 	for i in get_slide_collision_count():
-		var normal = get_slide_collision(i).get_normal()
-		if velocity_before.length() > 800.0:
-			var odraz = velocity_before.bounce(normal)
+		var normal: Vector2 = get_slide_collision(i).get_normal()
+		var impact: float = -velocity_before.dot(normal)
+		if impact > min_bounce_speed:
+			var odraz: Vector2 = velocity_before.bounce(normal)
 			odraz.y *= bounciness
 			velocity = odraz
