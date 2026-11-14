@@ -1,16 +1,21 @@
 [gd_scene format=3 uid="uid://y3uaehd0uls5"]
 
-[ext_resource type="Texture2D" uid="uid://c45m2bkgmcel4" path="res://assets/icon.svg" id="1_g2els"]
 [ext_resource type="Script" uid="uid://bshvklxlthnyd" path="res://scripts/physics.gd" id="1_qhqgy"]
+
+[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_3vyb7"]
+load_path = "res://.godot/imported/icon.svg-56083ea2a1f1a4f1e49773bdc6d7826c.ctex"
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_fbbwq"]
 radius = 64.3
 
 [node name="CharacterBody2D" type="CharacterBody2D" unique_id=249291869 groups=["player"]]
+position = Vector2(0, -4)
+scale = Vector2(2, 2)
 script = ExtResource("1_qhqgy")
 
 [node name="Sprite2D" type="Sprite2D" parent="." unique_id=1971099277]
-texture = ExtResource("1_g2els")
+position = Vector2(-1, 0)
+texture = SubResource("CompressedTexture2D_3vyb7")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=889098084]
 shape = SubResource("CircleShape2D_fbbwq")
