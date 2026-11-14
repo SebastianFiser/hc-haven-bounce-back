@@ -31,7 +31,7 @@ func _physics_process(delta: float) -> void:
 	
 	for i in get_slide_collision_count():
 		var normal = get_slide_collision(i).get_normal()
-		if velocity_before.length() > 500.0:
+		if velocity_before.length() > 800.0:
 			var odraz = velocity_before.bounce(normal)
 			odraz.y *= bounciness
 			velocity = odraz
