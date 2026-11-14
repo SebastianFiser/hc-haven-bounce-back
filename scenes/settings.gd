@@ -27,7 +27,7 @@ func _ready() -> void:
 	
 	var idx: int = AudioServer.get_bus_index("Music")
 	slider.value = db_to_linear(AudioServer.get_bus_volume_db(idx))
-	slider.value_changed(_on_slider_changed)
+	slider.value_changed.connect(_on_slider_changed)
 	_update_label()
 
 
