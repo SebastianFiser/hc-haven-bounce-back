@@ -7,6 +7,7 @@
 [ext_resource type="PackedScene" uid="uid://b3iq8w4pttico" path="res://scenes/goal.tscn" id="3_6j3wd"]
 [ext_resource type="PackedScene" uid="uid://devo0170ab2m5" path="res://scenes/hud.tscn" id="4_hp87r"]
 [ext_resource type="PackedScene" uid="uid://btyviafm85jqn" path="res://scenes/lvl2.tscn" id="6_hp87r"]
+[ext_resource type="Script" uid="uid://cokf6lwapkfun" path="res://scenes/dead_zone.gd" id="8_mvjca"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_mvjca"]
 texture = ExtResource("1_xmh5c")
@@ -54,6 +55,9 @@ custom_data_layer_0/type = 1
 sources/0 = SubResource("TileSetAtlasSource_mvjca")
 sources/1 = SubResource("TileSetAtlasSource_u7exc")
 
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_fbbwq"]
+size = Vector2(20, 24.847336)
+
 [node name="Node2D" type="Node2D" unique_id=1964242223]
 scale = Vector2(2, 2)
 
@@ -75,3 +79,13 @@ scale = Vector2(1, 1)
 next_level = ExtResource("6_hp87r")
 
 [node name="CanvasLayer" parent="." unique_id=153667473 instance=ExtResource("4_hp87r")]
+
+[node name="DeadZone" type="Area2D" parent="." unique_id=808177489]
+position = Vector2(-271.5, 367.5)
+scale = Vector2(47.64584, 1.6623789)
+script = ExtResource("8_mvjca")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="DeadZone" unique_id=1197735554]
+position = Vector2(15.751636, 3.3085153)
+scale = Vector2(-44357.51, -1.5448314)
+shape = SubResource("RectangleShape2D_fbbwq")
