@@ -4,8 +4,8 @@ var elapsed: float = 0.0
 
 @onready var timer_label: Label = $TimerLabel
 @onready var pause_menu: Control = $PauseMenu
-@onready var resume_button: Button = $PauseMenu/CenterContainer/VBoxContainer/ResumeButton
-@onready var quit_button: Button = $PauseMenu/CenterContainer/VBoxContainer/QuitButton
+@onready var resume_button: TextureButton = $PauseMenu/ResumeButton
+@onready var quit_button: TextureButton = $PauseMenu/QuitButton
 
 
 func _ready() -> void:

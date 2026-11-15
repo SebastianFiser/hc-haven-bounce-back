@@ -12,8 +12,8 @@ var index := 0
 
 @onready var slider: HSlider = %MusicSlider
 @onready var resolution_label: Label = $WSGroup/Resolution
-@onready var increase_button: Button = $WSGroup/increase_button
-@onready var decrease_button: Button = $WSGroup/decrease_button
+@onready var increase_button: TextureButton = $WSGroup/increase_button
+@onready var decrease_button: TextureButton = $WSGroup/decrease_button
 
 
 func _ready() -> void:
