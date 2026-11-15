@@ -5,6 +5,7 @@
 [ext_resource type="Texture2D" uid="uid://dpkbj4w2jddxx" path="res://assets/button ver 2-2.png" id="3_sugp2"]
 [ext_resource type="Texture2D" uid="uid://dixu6di150sbj" path="res://assets/button ver 2-3.png" id="4_jyhfs"]
 [ext_resource type="PackedScene" uid="uid://b2wev2jqp5vsw" path="res://scenes/background.tscn" id="5_tbgi4"]
+[ext_resource type="Texture2D" uid="uid://db0aclasd35i5" path="res://matejovo slozka/final semen.png" id="6_tefeu"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_k6tcs"]
 atlas = ExtResource("2_0wfyh")
@@ -41,6 +42,115 @@ region = Rect2(207.5093, 43.682003, 53.70836, 21.430431)
 [sub_resource type="AtlasTexture" id="AtlasTexture_tefeu"]
 atlas = ExtResource("3_sugp2")
 region = Rect2(282, 43, 53, 22)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_fjrip"]
+atlas = ExtResource("6_tefeu")
+region = Rect2(128, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_smehm"]
+atlas = ExtResource("6_tefeu")
+region = Rect2(160, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ur7pv"]
+atlas = ExtResource("6_tefeu")
+region = Rect2(192, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_y4r1p"]
+atlas = ExtResource("6_tefeu")
+region = Rect2(224, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_g2els"]
+atlas = ExtResource("6_tefeu")
+region = Rect2(256, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_tuyoq"]
+atlas = ExtResource("6_tefeu")
+region = Rect2(288, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_qhqgy"]
+atlas = ExtResource("6_tefeu")
+region = Rect2(0, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_dqkch"]
+atlas = ExtResource("6_tefeu")
+region = Rect2(32, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_qlg0r"]
+atlas = ExtResource("6_tefeu")
+region = Rect2(64, 0, 32, 32)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_kv50j"]
+resource_local_to_scene = true
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_fjrip")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_smehm")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ur7pv")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_y4r1p")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_y4r1p")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ur7pv")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_smehm")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_fjrip")
+}],
+"loop": 0,
+"name": &"big_bounce",
+"speed": 12.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_g2els")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_tuyoq")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_tuyoq")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_g2els")
+}],
+"loop": 0,
+"name": &"hit",
+"speed": 15.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_qhqgy")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_dqkch")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_qlg0r")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_qlg0r")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_dqkch")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_qhqgy")
+}],
+"loop": 1,
+"name": &"small_bounce",
+"speed": 8.0
+}]
 
 [node name="Main" type="Node2D" unique_id=646089278]
 position = Vector2(-7, 59)
@@ -120,6 +230,14 @@ stretch_mode = 0
 metadata/_edit_use_anchors_ = true
 
 [node name="Background" parent="." unique_id=488666543 instance=ExtResource("5_tbgi4")]
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=479660792]
+position = Vector2(448, 383.99997)
+scale = Vector2(9.8, 9.8)
+sprite_frames = SubResource("SpriteFrames_kv50j")
+animation = &"small_bounce"
+autoplay = "small_bounce"
+frame_progress = 0.13729766
 
 [connection signal="pressed" from="Start/start" to="." method="_on_start_pressed"]
 [connection signal="pressed" from="Start/player" to="." method="_on_player_pressed"]
