@@ -1,0 +1,13 @@
+[gd_scene format=3 uid="uid://b2wev2jqp5vsw"]
+
+[ext_resource type="Texture2D" uid="uid://b5bfpcw1uwq4" path="res://matejovo slozka/prdel.png" id="1_bkp1e"]
+
+[node name="Background" type="CanvasLayer" unique_id=488666543]
+layer = -1
+
+[node name="TextureRect" type="TextureRect" parent="." unique_id=403147350]
+offset_left = -797.0
+offset_top = -743.0
+offset_right = 1934.5
+offset_bottom = 1078.0
+texture = ExtResource("1_bkp1e")

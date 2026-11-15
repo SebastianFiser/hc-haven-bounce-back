@@ -7,6 +7,7 @@
 [ext_resource type="PackedScene" uid="uid://b3iq8w4pttico" path="res://scenes/goal.tscn" id="5_c8sub"]
 [ext_resource type="PackedScene" uid="uid://devo0170ab2m5" path="res://scenes/hud.tscn" id="6_hva3n"]
 [ext_resource type="PackedScene" uid="uid://dj14s6aqxjpdd" path="res://scenes/dead_zone.tscn" id="7_r7wj8"]
+[ext_resource type="PackedScene" uid="uid://b2wev2jqp5vsw" path="res://scenes/background.tscn" id="8_g6uqv"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_mvjca"]
 texture = ExtResource("1_nb5j2")
@@ -79,7 +80,8 @@ position = Vector2(208.5, -30)
 scale = Vector2(1, 1)
 
 [node name="CanvasLayer" parent="." unique_id=153667473 instance=ExtResource("6_hva3n")]
-visible = false
 
 [node name="DeadZone" parent="." unique_id=1034483411 instance=ExtResource("7_r7wj8")]
 position = Vector2(16.5, 348)
+
+[node name="Background" parent="." unique_id=488666543 instance=ExtResource("8_g6uqv")]

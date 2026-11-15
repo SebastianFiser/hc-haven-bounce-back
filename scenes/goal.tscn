@@ -1,6 +1,7 @@
 [gd_scene format=3 uid="uid://b3iq8w4pttico"]
 
 [ext_resource type="Script" uid="uid://cenxlwf3py0is" path="res://scripts/goal.gd" id="1_jbojv"]
+[ext_resource type="Texture2D" uid="uid://bvqc3ds7yg6ug" path="res://matejovo slozka/wlajka.png" id="2_sx1j4"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_0wfyh"]
 size = Vector2(56.599995, 53.899998)
@@ -14,12 +15,9 @@ position = Vector2(0.100001335, -0.20000076)
 scale = Vector2(0.99999994, 0.99999994)
 shape = SubResource("RectangleShape2D_0wfyh")
 
-[node name="ColorRect" type="ColorRect" parent="CollisionShape2D" unique_id=2006120366]
-offset_left = -18.500002
-offset_top = -18.350006
-offset_right = 21.499998
-offset_bottom = 21.649994
-offset_transform_enabled = true
-metadata/_edit_use_anchors_ = true
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=561162843]
+position = Vector2(-0.14999962, -0.05000019)
+scale = Vector2(1.6968749, 1.6968749)
+texture = ExtResource("2_sx1j4")
 
 [connection signal="body_entered" from="." to="." method="_on_goal_body_entered"]
