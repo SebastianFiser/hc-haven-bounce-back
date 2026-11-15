@@ -4,10 +4,10 @@ extends CharacterBody2D
 @export var acceleration: float = 1500.0
 @export var friction: float = 300.0
 @export var gravity: float = 900.0
-@export var jump_velocity: float = -400.0
+@export var jump_velocity: float = -700.0
 @export var jump_cut: float = 0.5
 @export var bounciness: float = 0.7
-@export var min_bounce_speed: float = 100.0
+@export var min_bounce_speed: float = 450.0
 @export_range(-180.0, 180.0) var hit_angle_offset: float = 180.0
 @export var hit_hold_time: float = 0.1
 
