@@ -3,7 +3,7 @@
 [ext_resource type="Script" uid="uid://bg0dng78ib3vl" path="res://scripts/main_menu.gd" id="1_o5qli"]
 [ext_resource type="Texture2D" uid="uid://co4gg1xugbpsr" path="res://assets/button ver 2.png" id="2_0wfyh"]
 [ext_resource type="Texture2D" uid="uid://dpkbj4w2jddxx" path="res://assets/button ver 2-2.png" id="3_sugp2"]
-[ext_resource type="Texture2D" uid="uid://dixu6di150sbj" path="res://assets/button ver 2-3.png" id="4_jyhfs"]
+[ext_resource type="Texture2D" uid="uid://d2plf263v0b82" path="res://button plugin do prdele.png" id="5_o6xl0"]
 [ext_resource type="PackedScene" uid="uid://b2wev2jqp5vsw" path="res://scenes/background.tscn" id="5_tbgi4"]
 [ext_resource type="Texture2D" uid="uid://db0aclasd35i5" path="res://matejovo slozka/final semen.png" id="6_tefeu"]
 
@@ -19,29 +19,29 @@ region = Rect2(207.86382, 9.8089905, 53.20256, 22.570786)
 atlas = ExtResource("3_sugp2")
 region = Rect2(282, 10, 53, 22)
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_0wfyh"]
-atlas = ExtResource("3_sugp2")
-region = Rect2(11, 9, 53, 23)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_sugp2"]
-atlas = ExtResource("3_sugp2")
-region = Rect2(9.844654, 73.027794, 53.15792, 23.306225)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_85g3d"]
-atlas = ExtResource("4_jyhfs")
-region = Rect2(569, 42, 53, 22)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_jyhfs"]
-atlas = ExtResource("2_0wfyh")
+[sub_resource type="AtlasTexture" id="AtlasTexture_choun"]
+atlas = ExtResource("5_o6xl0")
 region = Rect2(80, 42, 53, 23)
 
+[sub_resource type="AtlasTexture" id="AtlasTexture_ya4ey"]
+atlas = ExtResource("5_o6xl0")
+region = Rect2(208, 44, 53, 21)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_eb6dy"]
+atlas = ExtResource("5_o6xl0")
+region = Rect2(282, 43, 53, 22)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_jyhfs"]
+atlas = ExtResource("5_o6xl0")
+region = Rect2(710, 188, 53, 23)
+
 [sub_resource type="AtlasTexture" id="AtlasTexture_tbgi4"]
-atlas = ExtResource("2_0wfyh")
-region = Rect2(207.5093, 43.682003, 53.70836, 21.430431)
+atlas = ExtResource("5_o6xl0")
+region = Rect2(707, 246, 53, 21)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_tefeu"]
-atlas = ExtResource("3_sugp2")
-region = Rect2(282, 43, 53, 22)
+atlas = ExtResource("5_o6xl0")
+region = Rect2(709, 221, 53, 22)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_fjrip"]
 atlas = ExtResource("6_tefeu")
@@ -198,20 +198,6 @@ texture_hover = SubResource("AtlasTexture_tipki")
 stretch_mode = 0
 metadata/_edit_use_anchors_ = true
 
-[node name="player" type="TextureButton" parent="Start" unique_id=710408531]
-layout_mode = 1
-anchors_preset = -1
-anchor_right = 1.0
-anchor_bottom = 1.0
-offset_left = 847.0
-offset_top = 333.0
-offset_right = -233.0
-offset_bottom = -299.0
-texture_normal = SubResource("AtlasTexture_0wfyh")
-texture_pressed = SubResource("AtlasTexture_sugp2")
-texture_hover = SubResource("AtlasTexture_85g3d")
-stretch_mode = 0
-
 [node name="settings" type="TextureButton" parent="Start" unique_id=539181291]
 layout_mode = 1
 anchors_preset = -1
@@ -223,13 +209,13 @@ offset_left = 848.0
 offset_top = 352.0
 offset_right = 1064.0
 offset_bottom = 440.0
-texture_normal = SubResource("AtlasTexture_jyhfs")
-texture_pressed = SubResource("AtlasTexture_tbgi4")
-texture_hover = SubResource("AtlasTexture_tefeu")
+texture_normal = SubResource("AtlasTexture_choun")
+texture_pressed = SubResource("AtlasTexture_ya4ey")
+texture_hover = SubResource("AtlasTexture_eb6dy")
 stretch_mode = 0
 metadata/_edit_use_anchors_ = true
 
-[node name="settings2" type="TextureButton" parent="Start" unique_id=853569014]
+[node name="quit" type="TextureButton" parent="Start" unique_id=853569014]
 layout_mode = 1
 anchors_preset = -1
 anchor_left = -0.00703125
@@ -257,6 +243,5 @@ autoplay = "small_bounce"
 frame_progress = 0.13729766
 
 [connection signal="pressed" from="Start/start" to="." method="_on_start_pressed"]
-[connection signal="pressed" from="Start/player" to="." method="_on_player_pressed"]
 [connection signal="pressed" from="Start/settings" to="." method="_on_settings_pressed"]
-[connection signal="pressed" from="Start/settings2" to="." method="_on_settings_pressed"]
+[connection signal="pressed" from="Start/quit" to="." method="_on_quit_pressed"]
