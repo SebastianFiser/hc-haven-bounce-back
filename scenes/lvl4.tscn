@@ -1,0 +1,174 @@
+[gd_scene format=3 uid="uid://bqcbsqnwbta1q"]
+
+[ext_resource type="Texture2D" uid="uid://poqubw4xdlhc" path="res://assets/zem.png" id="1_tcqpp"]
+[ext_resource type="Texture2D" uid="uid://ba6gsc31n8bhj" path="res://assets/Sipka pro fisera.png" id="2_fj316"]
+[ext_resource type="Texture2D" uid="uid://d1cfhj54davx0" path="res://PETRŮV KLÍČ.png" id="3_bvdbf"]
+[ext_resource type="Script" uid="uid://wv16m0gpv6ih" path="res://scenes/tile_map_layer.gd" id="3_dm1w5"]
+[ext_resource type="PackedScene" uid="uid://y3uaehd0uls5" path="res://scenes/player.tscn" id="4_6ng2j"]
+[ext_resource type="Texture2D" uid="uid://bbq63v5kyvla1" path="res://nova trava nemam rad cerny.png" id="4_7uns1"]
+[ext_resource type="PackedScene" uid="uid://b3iq8w4pttico" path="res://scenes/goal.tscn" id="5_0k7kd"]
+[ext_resource type="Texture2D" uid="uid://bwv7fyrjimk86" path="res://cheeky boy blok travniku1.png" id="5_7ohwg"]
+[ext_resource type="PackedScene" uid="uid://devo0170ab2m5" path="res://scenes/hud.tscn" id="6_07gxn"]
+[ext_resource type="Texture2D" uid="uid://8vpu8fqfmq0n" path="res://howno kdyz malo pijes REMASTERED.png" id="6_y1vgt"]
+[ext_resource type="PackedScene" uid="uid://dj14s6aqxjpdd" path="res://scenes/dead_zone.tscn" id="7_aj427"]
+[ext_resource type="Texture2D" uid="uid://bk0gwoc6heks7" path="res://sebovo pero (2cm).png" id="7_iq5le"]
+[ext_resource type="Texture2D" uid="uid://h68p5uj1b811" path="res://digamant.png" id="8_6sefg"]
+[ext_resource type="PackedScene" uid="uid://b2wev2jqp5vsw" path="res://scenes/background.tscn" id="8_htwy5"]
+[ext_resource type="Texture2D" uid="uid://bekm5udr0opli" path="res://emerald.png" id="9_dsu66"]
+[ext_resource type="Texture2D" uid="uid://b7xaf81gcjsk4" path="res://actualy pouzitelna sipka pro fischera.png" id="10_2yvin"]
+[ext_resource type="Texture2D" uid="uid://bbh3aarlgapux" path="res://howno S SIPKOU.png" id="11_ysvqw"]
+[ext_resource type="PackedScene" uid="uid://bg4p0flj3evsj" path="res://scenes/lvl5.tscn" id="15_d41ay"]
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_mvjca"]
+texture = ExtResource("1_tcqpp")
+0:0/next_alternative_id = 3
+0:0/0 = 0
+0:0/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
+0:0/0/custom_data_0 = true
+0:0/1 = 1
+0:0/1/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
+1:0/next_alternative_id = 3
+1:0/0 = 0
+1:0/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
+1:0/1 = 1
+1:0/1/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
+0:2/0 = 0
+0:2/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
+0:1/0 = 0
+0:1/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
+1:1/0 = 0
+1:1/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
+1:2/0 = 0
+1:2/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
+2:2/0 = 0
+2:2/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
+3:1/0 = 0
+3:1/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
+2:1/0 = 0
+2:1/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
+2:0/0 = 0
+2:0/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
+3:0/0 = 0
+3:0/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_u7exc"]
+texture = ExtResource("2_fj316")
+0:0/0 = 0
+0:1/0 = 0
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_n7evg"]
+texture = ExtResource("3_bvdbf")
+0:0/0 = 0
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_ryxsk"]
+texture = ExtResource("4_7uns1")
+0:0/0 = 0
+1:0/0 = 0
+2:0/0 = 0
+3:0/0 = 0
+0:1/0 = 0
+1:1/0 = 0
+2:1/0 = 0
+3:1/0 = 0
+0:2/0 = 0
+1:2/0 = 0
+2:2/0 = 0
+3:2/0 = 0
+0:3/0 = 0
+1:3/0 = 0
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_kpy5e"]
+texture = ExtResource("5_7ohwg")
+0:0/0 = 0
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_8yxcp"]
+texture = ExtResource("6_y1vgt")
+0:0/0 = 0
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_ldvkq"]
+texture = ExtResource("7_iq5le")
+0:0/0 = 0
+1:0/0 = 0
+2:0/0 = 0
+3:0/0 = 0
+4:0/0 = 0
+0:1/0 = 0
+1:1/0 = 0
+2:1/0 = 0
+3:1/0 = 0
+4:1/0 = 0
+0:2/0 = 0
+1:2/0 = 0
+2:2/0 = 0
+3:2/0 = 0
+4:2/0 = 0
+0:3/0 = 0
+1:3/0 = 0
+2:3/0 = 0
+3:3/0 = 0
+4:3/0 = 0
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_3jqp1"]
+texture = ExtResource("8_6sefg")
+0:0/0 = 0
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_wxq22"]
+texture = ExtResource("9_dsu66")
+0:0/0 = 0
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_1gwi5"]
+texture = ExtResource("10_2yvin")
+0:0/0 = 0
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_78xwv"]
+texture = ExtResource("11_ysvqw")
+0:0/0 = 0
+
+[sub_resource type="TileSet" id="TileSet_sx1j4"]
+uv_clipping = true
+physics_layer_0/collision_layer = 1
+physics_layer_1/collision_layer = 1
+custom_data_layer_0/name = "grows_dirt"
+custom_data_layer_0/type = 1
+sources/0 = SubResource("TileSetAtlasSource_mvjca")
+sources/1 = SubResource("TileSetAtlasSource_u7exc")
+sources/3 = SubResource("TileSetAtlasSource_kpy5e")
+sources/4 = SubResource("TileSetAtlasSource_8yxcp")
+sources/5 = SubResource("TileSetAtlasSource_ldvkq")
+sources/6 = SubResource("TileSetAtlasSource_3jqp1")
+sources/7 = SubResource("TileSetAtlasSource_wxq22")
+sources/2 = SubResource("TileSetAtlasSource_ryxsk")
+sources/8 = SubResource("TileSetAtlasSource_1gwi5")
+sources/9 = SubResource("TileSetAtlasSource_78xwv")
+sources/10 = SubResource("TileSetAtlasSource_n7evg")
+
+[node name="Node2D2" type="Node2D" unique_id=1964242223]
+scale = Vector2(2, 2)
+
+[node name="TileMapLayer" type="TileMapLayer" parent="." unique_id=623865676]
+scale = Vector2(2, 2)
+tile_set = SubResource("TileSet_sx1j4")
+rendering_quadrant_size = 32
+physics_quadrant_size = 32
+script = ExtResource("3_dm1w5")
+
+[node name="CharacterBody2D" parent="." unique_id=249291869 instance=ExtResource("4_6ng2j")]
+position = Vector2(0, 40)
+scale = Vector2(0.23, 0.23)
+speed = 1000.0
+acceleration = 1900.0
+friction = 200.0
+bounciness = 0.9
+
+[node name="Goal" parent="." unique_id=286393484 instance=ExtResource("5_0k7kd")]
+position = Vector2(4, -72)
+scale = Vector2(1, 1)
+next_level = ExtResource("15_d41ay")
+
+[node name="CanvasLayer" parent="." unique_id=153667473 instance=ExtResource("6_07gxn")]
+
+[node name="DeadZone" parent="." unique_id=1034483411 instance=ExtResource("7_aj427")]
+position = Vector2(48, 856)
+
+[node name="Background" parent="." unique_id=488666543 instance=ExtResource("8_htwy5")]
+visible = false
