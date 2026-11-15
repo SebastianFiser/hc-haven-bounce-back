@@ -117,11 +117,18 @@ animations = [{
 
 [node name="CharacterBody2D" type="CharacterBody2D" unique_id=249291869 groups=["player"]]
 script = ExtResource("1_qhqgy")
+speed = 600.0
+acceleration = 1300.0
+friction = 600.0
+jump_velocity = -600.0
+bounciness = 0.8
+min_bounce_speed = 500.0
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=889098084]
 shape = SubResource("CircleShape2D_fbbwq")
 
 [node name="Camera2D" type="Camera2D" parent="." unique_id=20889261]
+scale = Vector2(2, 2)
 zoom = Vector2(0.5, 0.5)
 position_smoothing_enabled = true
 
