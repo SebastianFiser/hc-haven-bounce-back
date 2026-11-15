@@ -63,6 +63,7 @@ size = Vector2(20, 24.847336)
 scale = Vector2(2, 2)
 
 [node name="TileMapLayer" type="TileMapLayer" parent="." unique_id=623865676]
+position = Vector2(-22, 2)
 scale = Vector2(2, 2)
 tile_map_data = PackedByteArray("AAACAAQAAQAAAAAAAFABAAQAAQAAAAEAAFD7/wgAAAAAAAAAAAD8/wgAAAAAAAAAAAD9/wgAAAAAAAAAAAD+/wgAAAAAAAAAAAD//wgAAAAAAAAAAAAAAAgAAAAAAAAAAAABAAgAAAAAAAAAAAACAAgAAAAAAAAAAAADAAgAAAAAAAAAAAAFAAgAAAAAAAAAAAAGAAgAAAAAAAAAAAAEAAgAAAAAAAAAAAAHAAgAAAAAAAAAAAAIAAgAAAAAAAAAAAAJAAgAAAAAAAAAAAAKAAgAAAAAAAAAAAALAAgAAAAAAAAAAAAMAAgAAAAAAAAAAAANAAgAAAAAAAAAAAAOAAgAAAAAAAAAAAAPAAgAAAAAAAAAAAAQAAgAAAAAAAAAAAA=")
 tile_set = SubResource("TileSet_sx1j4")
@@ -75,7 +76,7 @@ position = Vector2(-82.5, 92.5)
 scale = Vector2(0.3, 0.3)
 
 [node name="Goal" parent="." unique_id=286393484 instance=ExtResource("3_6j3wd")]
-position = Vector2(-80, 220)
+position = Vector2(465.5, 231.5)
 scale = Vector2(1, 1)
 next_level = ExtResource("6_hp87r")
 
