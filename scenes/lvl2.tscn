@@ -75,8 +75,7 @@ friction = 200.0
 bounciness = 0.9
 
 [node name="Goal" parent="." unique_id=286393484 instance=ExtResource("5_c8sub")]
-visible = false
-position = Vector2(208.5, -30)
+position = Vector2(-420, -468)
 scale = Vector2(1, 1)
 
 [node name="CanvasLayer" parent="." unique_id=153667473 instance=ExtResource("6_hva3n")]
